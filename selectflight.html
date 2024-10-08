@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Flight</title>
+</head>
+
+<body>
+    <h1>Select Flight</h1>
+    <label for="flight">Choose a flight:</label>
+    <select id="flight" name="flight">
+        <option value="Flight 101 - New York to London">Flight 101 - New York to London</option>
+        <option value="Flight 202 - Paris to Tokyo">Flight 202 - Paris to Tokyo</option>
+        <option value="Flight 303 - Sydney to San Francisco">Flight 303 - Sydney to San Francisco</option>
+    </select>
+    <button id="confirm">Confirm Flight</button>
+
+    <script>
+        // Get email from localStorage
+        const email = localStorage.getItem('email');
+
+        document.getElementById('confirm').onclick = function() {
+            const flight = document.getElementById('flight').value;
+            // Redirect to confirmation page with email and flight in URL parameters
+            window.location.href = `confirmation.html?email=${encodeURIComponent(email)}&flight=${encodeURIComponent(flight)}`;
+        };
+    </script>
+</body>
+
+</html>

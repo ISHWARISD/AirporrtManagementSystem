@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Summary</title>
+</head>
+
+<body>
+    <h1>Booking Summary</h1>
+    <p>Passenger: John Doe</p>
+    <p>Email: john.doe@example.com</p>
+    <p>Travel Date: 2024-10-15</p>
+    <p>Flight: FL123 - NYC to LON - $500</p>
+
+    <form action="confirmation.html" method="get">
+        <h3>Payment Information</h3>
+        <label for="cardname">Name on Card:</label><br>
+        <input type="text" id="cardname" name="cardname" required><br><br>
+
+        <label for="cardnumber">Card Number:</label><br>
+        <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+
+        <label for="expiry">Expiry Date:</label><br>
+        <input type="month" id="expiry" name="expiry" required><br><br>
+
+        <label for="cvv">CVV:</label><br>
+        <input type="text" id="cvv" name="cvv" required><br><br>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+
+</html>
